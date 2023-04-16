@@ -38,7 +38,7 @@ Create an Elan project. Delimit speech on a given tier by creating annotations. 
 	optional arguments:
 
 	  -h, --help            show this help message and exit
-  	-e ELAN_FILE, --elan-file ELAN_FILE
+ 		-e ELAN_FILE, --elan-file ELAN_FILE
 				Elan file (.eaf).
 	  -E LIST_ELAN, --list-elan LIST_ELAN
 				List of Elan files (.eaf).
@@ -72,4 +72,4 @@ CC BY-SA
 
 ## Caveats
 
-1. So far, this only o
+1. So far, this only works on alignable tier types. If there's any demand, it can be expanded to work with other tier types.
