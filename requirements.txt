@@ -1,0 +1,11 @@
+Brotli==1.0.9
+certifi==2022.12.7
+charset-normalizer==3.1.0
+idna==3.4
+mutagen==1.46.0
+pycryptodomex==3.17
+requests==2.28.2
+SpeechRecognition==3.10.0
+tqdm==4.65.0
+urllib3==1.26.15
+websockets==11.0.1
