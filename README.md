@@ -25,7 +25,7 @@ This is a Python script to use Google's speech-to-text API to transcribe annotat
 
 ## Usage	
 
-Create an Elan project. Delimit speech on a given tier by creating annotations. Run the script. Specify the Elan file with `-e` or a list of Elan files with `-E` and the language to be speech-recognized with `-l`. Specify a tier by name with `-t` and / or an associated media file with `-m` (otherwise, the script will take the first media / tier it encounters in the Elan file).
+Create an Elan project. Delimit speech on a given tier by creating annotations. In my experience annotations 30 seconds or longer return errors from the API, so limit annotations to single utterances. Run the script. Specify the Elan file with `-e` or a list of Elan files with `-E` and the language to be speech-recognized with `-l`. Specify a tier by name with `-t` and / or an associated media file with `-m` (otherwise, the script will take the first media / tier it encounters in the Elan file).
 
 	usage: elan-asr.py 
 
@@ -72,4 +72,4 @@ CC BY-SA
 
 ## Caveats
 
-1. So far, this only works on alignable tier types. If there's any demand, it can be expanded to work with other tier types.
+1. So far, this only works on alignable tier types. If there's any demand, I can add other tier types.
