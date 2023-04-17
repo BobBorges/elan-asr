@@ -8,6 +8,7 @@ This is a Python script to use Google's speech-to-text API to transcribe annotat
 ## Installation
 
 1. Clone the repo & `cd` into `elan-asr/`.
+
 2. Make a python env and activate
 
 	`python -m venv env`
@@ -18,14 +19,20 @@ This is a Python script to use Google's speech-to-text API to transcribe annotat
 
 	`pip install -r requirements.txt`
 	
-4. Use
+4. (Optionally) Set an alias or add to PATH environment.
+
+5. Use
 
 
 
 
 ## Usage	
 
-Create an Elan project. Delimit speech on a given tier by creating annotations. In my experience annotations 30 seconds or longer return errors from the API, so limit annotations to single utterances. Run the script. Specify the Elan file with `-e` or a list of Elan files with `-E` and the language to be speech-recognized with `-l`. Specify a tier by name with `-t` and / or an associated media file with `-m` (otherwise, the script will take the first media / tier it encounters in the Elan file).
+Create an Elan project. Delimit speech on a given tier by creating annotations. In my experience annotations 30 seconds or longer return errors from the API, so limit annotations to single utterances. Run the script. Specify the Elan file with `-e | --elan-file` or a list of Elan files with `-E | --list-elan` and the language to be speech-recognized with `-l | --language`. Specify a tier by name with `-t | --tier` and / or an associated media file with `-m | --media-index` (otherwise, the script will take the first media / tier it encounters in the Elan file).
+
+Print language options using `-L | --language-options` or if you're not sure of the order of linked media, print their indexes with `-M | --media-indexes`.
+
+Running the script generates a temporary folder in the same location as the Elan file operated on, which will contain (a) the sliced media (ffmpeg output: generated .wav files for each annotation), and (b) the full return from the ASR API (a json file with potential alternative text values and the confidence score for the highest ranked alternative) -- keep these temporary files with `-k | --keep-tmp`.
 
 	usage: elan-asr.py 
 
