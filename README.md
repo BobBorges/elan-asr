@@ -72,7 +72,7 @@ Aside from the python modules in the requirements file, ffmpeg must be installed
 
 ## Licence
 
-CC BY-SA
+CC BY
 
 
 
@@ -80,3 +80,8 @@ CC BY-SA
 ## Caveats
 
 1. So far, this only works on alignable tier types. If there's any demand, I can add other tier types.
+
+
+## Funding acknowledgement
+
+The research leading to these results has received funding from the Norwegian Financial Mechanism 2014-2021: 2020/37/K/HS2/02779
